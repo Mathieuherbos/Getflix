@@ -33,7 +33,7 @@ The aim of this project is to.....
 #### Landing page
 
 * **Sign Up** button leading to *Sign Up* page
-* **Log in** button leading to *login* page
+* **Log in** button leading to *login* pages
 
 #### Home page
 
@@ -92,6 +92,7 @@ Each team member was always connected to their discord vocal channel in case hel
 ### Site Map
 
 The site is constructed as follows:
+
 
 * The user will arrive at the landing page
 * They will then choose to either sign up or login
