@@ -96,25 +96,25 @@ The site is constructed as follows:
 
 * The user will arrive at the landing page
 * They will then choose to either sign up or login
-      * arrive at sign up page
-      * arrive at login page
+ * arrive at sign up page
+ * arrive at login page
 * From the signup or login page, they will be redirected to the main home page, from here there are multiple options
-      * If logout selected
-            * arrive at landing page
-      * If search launched
-            * arrive at results
-      * If video selected
-            * arrive at video page
-      * If category selected
-            * arrive at category / filter page
-                  * If filtered
-                             * arrive at results
-                                       * if video selected
-                                                   * arrive at video page
-                  * If video selected
-                             * arrive at video page
-      * If video selected
-                  * arrive at video page
+ * If logout selected
+  * arrive at landing page
+ * If search launched
+  * arrive at results
+   * If video selected
+    * arrive at video page
+ * If category selected
+  * arrive at category / filter page
+   * If filtered
+    * arrive at results
+     * if video selected
+      * arrive at video page
+   * If video selected
+    * arrive at video page
+ * If video selected
+  * arrive at video page
   
 
 ![site-map](diagram_sitemap.jpg)
