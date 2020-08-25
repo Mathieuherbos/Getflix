@@ -6,9 +6,10 @@
     background-size: cover;
 }
 
-.index, .signinform {
+.index, .signinform, .signupform {
     font-family: 'Roboto', sans-serif;
-    text-shadow: 0px 2px 4px rgb(45, 45, 46);
+    text-shadow: 0px 4px 7px rgb(31, 29, 29);
+    z-index: 3;
 }
 
 .index {
@@ -19,12 +20,25 @@
     color: rgb(240, 237, 230);
 }
 
+.signupform {
+    color: rgb(240, 237, 230);
+    
+}
+
 
 .login {
     height: 100%;  
     display: flex;
     align-items: center;
     background-image: url("coolcats.jpg");
+    background-size: cover;
+}
+
+.signup {
+    height: 100%;  
+    display: flex;
+    align-items: center;
+    background-image: url("cateyes.jpg");
     background-size: cover;
 }
 
@@ -32,19 +46,14 @@
     font-size: 0.7em;
 }
 
-.login {
-    height: 100%;  
-    display: flex;
-    align-items: center;
-    background-image: url("coolcats.jpg");
-    background-size: cover;
-}
 
-.signinform {
+
+.signinform, .signupform {
     background-color: rgb(223, 222, 219, 0.2);
     border-radius: 0.4em;
     padding: 1em;
     line-height: 50%;
+    z-index: 1;
 }
 
 .gobtn {
@@ -54,5 +63,20 @@
 .usernameSi, .passwordSi {
     padding-top: 1.4em;
     font-size: 0.7em;
+    z-index: 2;    
 }
 
+input[type=text], input[type=password] {
+    background-color: rgba(243, 239, 239, 0.9);
+    border-radius: 1em;
+    border: none;
+    color: rgb(15, 15, 15);
+
+}
+
+.title {
+    font-size: 1.6em;
+}
+
+
+  
