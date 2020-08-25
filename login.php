@@ -85,7 +85,7 @@
                 <div class="row align-items-center">
                     
                     <div class="col-sm-6 offset-sm-2 col-md-4 offset-md-4 mx-auto text-center signinform">
-                        <h1 class="title"><b>LOG IN <i class="fa fa-paw animate__animated animate__fadeIn" aria-hidden="true"></i></i></b></h1>
+                        <h1 class="title"><b>LOG IN</b></h1>
                             <form action="login.php" method="post">
                                     <div class="usernameSi">
                                         <p>User name</p>
@@ -96,7 +96,7 @@
                                     </div>
                                 <input type="password" name="pw" placeholder="">
                                 <br>
-                                <button type="submit" name="submit" class="btn btn-outline-light gobtn"><b>GO !</b></button>
+                                <button type="submit" name="submit" class="btn btn-outline-light gobtn"><b>GO ! <i class="fa fa-paw animate__animated animate__fadeIn" aria-hidden="true"></i></b></button>
                             </form>
                     </div>
                 </div>

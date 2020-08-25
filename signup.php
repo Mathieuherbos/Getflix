@@ -35,7 +35,7 @@ header("location: login.php")
                 <div class="row align-items-center">
                     
                     <div class="col-sm-8 offset-sm-4 col-md-4 offset-md-4 mx-auto text-center signupform">
-                        <h1 class="title"><b>SIGN UP <i class="fa fa-paw animate__animated animate__fadeIn" aria-hidden="true"></i></b></h1>
+                        <h1 class="title"><b>SIGN UP </b></h1>
                             <form action="login.php" method="post">
                                     <div class="usernameSi">
                                         <p>First name</p>
@@ -58,7 +58,7 @@ header("location: login.php")
                                     </div>
                                 <input type="password" name="confirm_pw" placeholder="">
                                 <br>
-                                <button type="submit" name="submit" class="btn btn-outline-light gobtn"><b>GO !</b></button>
+                                <button type="submit" name="submit" class="btn btn-outline-light gobtn"><b>GO ! <i class="fa fa-paw animate__animated animate__fadeIn" aria-hidden="true"></i></b></button>
                             </form>
                     </div>
                 </div>
