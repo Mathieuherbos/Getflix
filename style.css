@@ -1,0 +1,58 @@
+.landpage {
+    height: 100%;  
+    display: flex;
+    align-items: center;
+    background-image: url(catbutterfly.jpg);
+    background-size: cover;
+}
+
+.index, .signinform {
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px 2px 4px rgb(45, 45, 46);
+}
+
+.index {
+    color: rgb(236, 230, 222);
+}
+
+.signinform {
+    color: rgb(240, 237, 230);
+}
+
+
+.login {
+    height: 100%;  
+    display: flex;
+    align-items: center;
+    background-image: url("coolcats.jpg");
+    background-size: cover;
+}
+
+.introtext {
+    font-size: 0.7em;
+}
+
+.login {
+    height: 100%;  
+    display: flex;
+    align-items: center;
+    background-image: url("coolcats.jpg");
+    background-size: cover;
+}
+
+.signinform {
+    background-color: rgb(223, 222, 219, 0.2);
+    border-radius: 0.4em;
+    padding: 1em;
+    line-height: 50%;
+}
+
+.gobtn {
+    margin-top: 1em;
+}
+
+.usernameSi, .passwordSi {
+    padding-top: 1.4em;
+    font-size: 0.7em;
+}
+
