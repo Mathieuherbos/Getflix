@@ -1,10 +1,3 @@
-.landpage {
-    height: 100%;  
-    display: flex;
-    align-items: center;
-    background-image: url(catbutterfly.jpg);
-    background-size: cover;
-}
 
 .index, .signinform, .signupform {
     font-family: 'Roboto', sans-serif;
@@ -26,21 +19,43 @@
 }
 
 
-.login {
-    height: 100%;  
+#cover {
+    background: #222 url('netcat.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    text-align: center;
     display: flex;
     align-items: center;
-    background-image: url("coolcats.jpg");
-    background-size: cover;
+    position: relative;
 }
 
-.signup {
-    height: 100%;  
+#cover2 {
+    background: #222 url('catlook.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    text-align: center;
     display: flex;
     align-items: center;
-    background-image: url("catlook.jpg");
-    background-size: cover;
+    position: relative;
 }
+
+#cover3 {
+    background: #222 url('catbutterfly.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#cover-caption {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+
 
 .introtext {
     font-size: 0.7em;
@@ -60,6 +75,8 @@
     margin-top: 1em;
 }
 
+
+
 .usernameSi, .passwordSi {
     padding-top: 1.4em;
     font-size: 0.7em;
@@ -75,7 +92,9 @@ input[type=text], input[type=password] {
 }
 
 .title {
-    font-size: 1.6em;
+    color: rgb(243, 240, 237);
+    font-family: 'Archivo Black', sans-serif;
+
 }
 
 
