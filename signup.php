@@ -56,7 +56,24 @@ mysqli_query($connection, $sql);
                                     <div class="passwordSi">
                                         <p>Confirm password</p>
                                     </div>
-                                <input type="password" name="confirm_pw" placeholder="">
+                                <input type="password" name="confirm_pw" placeholder=""><br>
+                                <div class="usernameSi">              
+                                    <p>Do you want to go premium ?</p>
+                                </div>
+                                <div class="radio">
+                                    <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">
+                                        Yes !
+                                    </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">
+                                        No, thank you
+                                    </label>
+                                    </div>
+                                </div>
                                 <br>
                                 <button type="submit" name="submit" class="btn btn-outline-light gobtn"><b>GO ! <i class="fa fa-paw animate__animated animate__fadeIn" aria-hidden="true"></i></b></button>
                             </form>
