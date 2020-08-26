@@ -13,7 +13,7 @@ $sql = "INSERT INTO login(first_name, last_name, user_name, pw)
 VALUES ('$firstName', '$lastName', '$user', '$pw')";
 mysqli_query($connection, $sql);
 
-header("location: login.php")
+
 
 ?>
 
@@ -35,8 +35,8 @@ header("location: login.php")
                     <div class="row">
                         <div class="col-xl-4 col-lg-5 col-md-6 col-sm-10 mx-auto text-center form p-4">
                             <h1 class="title">SIGN UP</h1>
-                            <div class="px-2 signinform">
-                            <form action="login.php" method="post">
+                            <div class="px-2 signupform">
+                            <form action="signup.php" method="post">
                                     <div class="usernameSi">
                                         <p>First name</p>
                                     </div>
