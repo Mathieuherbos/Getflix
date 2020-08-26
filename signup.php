@@ -62,14 +62,14 @@ mysqli_query($connection, $sql);
                                 </div>
                                 <div class="radio">
                                     <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioYes" value="yes">
+                                    <label class="form-check-label" for="radioYes">
                                         Yes !
                                     </label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioNo" value="no">
+                                    <label class="form-check-label" for="radioNo">
                                         No, thank you
                                     </label>
                                     </div>
