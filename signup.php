@@ -48,7 +48,11 @@ mysqli_query($connection, $sql);
                                     <div class="passwordSi">
                                         <p>User name</p>
                                     </div>
-                                <input type="text" name="user" placeholder="">
+                                <input type="text" name="email" placeholder="">
+                                <div class="usernameSi">
+                                        <p>E-mail adress</p>
+                                    </div>
+                                <input type="password" name="pw" placeholder="">
                                 <div class="usernameSi">
                                         <p>Password</p>
                                     </div>
