@@ -1,5 +1,23 @@
+<?php
+include_once "db.php";
+include_once "login_db.php";
+
+// NEEDS TO BE ADDED TO EVERY PAGE OTHER THAN INDEX, LOGIN, SIGNUP
+session_start();
+
+?>
+
+<!-- for header -->
+<?php if(isset($_SESSION['userN'])){
+    echo "<p>Welcome " . $_SESSION['userN'] . "</p>";
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html>
+
 
 <head>
     <meta charset="utf-8">
@@ -17,7 +35,6 @@
     <script src="https://kit.fontawesome.com/d9b3bd9a2e.js" crossorigin="anonymous"></script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 
 
     <title>Welcome to Catflix</title>
@@ -53,6 +70,13 @@
         </div>
 
     </div>
+
+    <?php if(isset($_SESSION['userN'])){
+    echo "<p>Welcome " . $_SESSION['userN'] . "</p>";
+}
+?>
+
+    <button type="submit" class="btn btn-primary" name="logout">LOGOUT</button>
 
     <h2>Our top picks for you ~</h2>
 

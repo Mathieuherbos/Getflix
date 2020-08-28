@@ -1,0 +1,153 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* CAROUSEL  netflix*/
+
+/* .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+  .wrapper section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 20px 0;
+  }
+  .wrapper section .item {
+    padding: 0 2px;
+    transition: 250ms all;
+  }
+  .wrapper section .item:hover {
+    margin: 0 40px;
+    transform: scale(1.2);
+  }
+  .wrapper section a {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 6em;
+    background: #000;
+    width: 80px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+  }
+  .wrapper section a:nth-of-type(1) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      -90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+  .wrapper section a:nth-of-type(2) {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+  @media only screen and (max-width: 600px) {
+    a.arrow__btn {
+      display: none;
+    }
+  } */
+
+/* CAROUSEL */
+
+.col {
+  padding: 0;
+}
+
+.panel {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.panel h3 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  font-style: italic;
+  padding: 1.7rem;
+}
+
+/*Page Pictures*/
+.img_gallery {
+  width: 250px;
+  height: auto;
+
+  max-width: 300px;
+  max-height: 300px;
+  height: auto;
+  margin: 0;
+  transition: transform 0.2s;
+}
+
+.img_gallery:hover {
+  height: 100%;
+  color: black;
+  transform: scale(1.2);
+}
+
+.arrow {
+  font-size: 40px;
+  margin: 10px 25px 0px 25px;
+  color: #202020;
+  width: 10%;
+}
+
+.arrow:hover {
+  color: #3f3f3f;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  height: 50px;
+  width: 50px;
+}
