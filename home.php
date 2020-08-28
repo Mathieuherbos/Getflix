@@ -95,53 +95,53 @@ else {
     <h3>Comedy</h3>
     <div class="owl-carousel owl-theme">
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
 
@@ -151,53 +151,53 @@ else {
     <h3>Action</h3>
     <div class="owl-carousel owl-theme">
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
         <div class="item">
-            <a href="pic.jpg">
-                <img src="pic.jpg" class="img-fluid img_gallery" alt="Shrek" />
+            <a href="cat1.jpg">
+                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
             </a>
         </div>
 
