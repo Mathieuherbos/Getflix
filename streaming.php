@@ -9,7 +9,7 @@
     <body>
         <div class="container">
             <?php
-                $bdd = new PDO ('mysql:host=localhost;port=3308;dbname=getflixtest','root','root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+                $bdd = new PDO ('mysql:host=sql100.epizy.com;port=3306;dbname=epiz_26591763_catflix','epiz_26591763','nNU2fD6vzKC', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
                 $reponse = $bdd->query ('SELECT * FROM youtubeinfos');
                 while ($datas = $reponse -> fetch())
                 {
