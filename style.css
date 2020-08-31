@@ -143,3 +143,19 @@ h3 {
   text-align: center;
   margin: 2rem;
 }
+
+/* Password validation */
+
+.pd-password-valid {
+  color: green;
+  
+}
+
+.pd-password-invalid{
+  color:red;
+}
+      .pd-password-invalid:before {
+       position: relative;
+       left: -5px;
+       content: "x";
+      }

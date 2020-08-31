@@ -47,7 +47,8 @@ elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)){
     header("Location: signup.php?error=invalidemail&firstName=" .$firstName. "&lastName=" .$lastName. "&user=" .$user);
     exit();
 }
-// check if paswords match
+
+// check if passwords match 
 elseif ($pw !== $pwConf){
     header("Location: signup.php?error=passwordcheck&firstName=" .$firstName. "&lastName=" .$lastName. "&user=" .$user. "&email=" .$email);
     exit();
@@ -66,11 +67,12 @@ else {
         mysqli_stmt_execute($stmt);
         mysqli_stmt_store_result($stmt);
 
-        //check if username taken NOT WORKING
-        $resultcheck = mysqli_stmt_num_rows($stmt);
-        if ($resultcheck > 0){
-            header("Location: signup.php?error=usertaken&firstName" .$firstName. "&lastName=" .$lastName. "&email=" .$email);
-            exit();
+        //check if username taken (last added part 31.08)
+        $sql = "SELECT userName FROM userdb WHERE userName = '".$user."';";
+        $resultscheck = mysqli_query($connection, $sql);
+        $row = mysqli_fetch_assoc($resultscheck);
+        if ($row >= 1){
+            header("Location: signup.php?error=usertaken");
         }
         else {
             // prepared statement to insert data into database
@@ -99,4 +101,6 @@ else {
     mysqli_close($connection);
     
 }
+
+
 ?>
