@@ -172,18 +172,18 @@ As we decided on the "Cat" theme, a preliminary design for each page was formed 
 
 ![index/landing page](readme-img/index1.jpg)
 
-![signup page](readme-img/signup1.jpg)
+![signup page](readme-img/signup1.JPG)
 
 ![login page](readme-img/login1.jpg)
 
-![home page](readme-img/home1-1.jpg)
+![home page](readme-img/home1-1.JPG)
 ![home page](readme-img/home1-2.jpg)
 
 _Inspiration for the design of this site was taken from Netflix_
 
 In planning for the movie database table, as each row would contain multiple columns of information, excel was used for organisational purposes and then uploaded to the database via a csv file.
 
-![movie db](moviedbexcel1.jpg)
+![movie db](readme-img/moviedbexcel1.jpg)
 
 ### Mid project
 
