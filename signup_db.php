@@ -23,34 +23,40 @@ if (empty($firstName) || empty($lastName) || empty($user) || empty($email) || em
     exit();
 }
 //check if first name contains only letters
-elseif (!preg_match("/^[a-zA-Z]*/", $firstName)){
-    header("Location: signup.php?error=invalidfirstName&lastName=" .$lastName. "&user=" .$user. "&email=" .$email);
+elseif (!preg_match("/[a-zA-Z]/", $firstName)){
+    header("Location: signup.php?error=invalidfirstName");
     exit();
 }
 //check if last name contains only letters
-elseif (!preg_match("/^[a-zA-Z]*/", $lastName)){
-    header("Location: signup.php?error=invalidlastName&firstName=" .$firstName. "&user=" .$user. "&email=" .$email);
+elseif (!preg_match("/[a-zA-Z]/", $lastName)){
+    header("Location: signup.php?error=invalidlastName&user");
     exit();
 }
 // check if email is valid AND username contains only letters and/or numbrs
-elseif (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*/", $user)){
-    header("Location: signup.php?error=invaliduseremail&firstName=" .$firstName. "&lastName=" .$lastName);
+elseif (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/[a-zA-Z0-9]/", $user)){
+    header("Location: signup.php?error=invaliduserandemail");
     exit();
 }
 // check if user contains only letters and/or numbers
-elseif (!preg_match("/^[a-zA-Z0-9]*/", $user)){
-    header("Location: signup.php?error=invaliduser&firstName=" .$firstName. "&lastName=" .$lastName. "&email=" .$email);
+elseif (!preg_match("/[a-zA-Z0-9]/", $user)){
+    header("Location: signup.php?error=invaliduser");
     exit();
 }
 // check if email is valid
 elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-    header("Location: signup.php?error=invalidemail&firstName=" .$firstName. "&lastName=" .$lastName. "&user=" .$user);
+    header("Location: signup.php?error=invalidemail");
     exit();
+}
+
+//!check if password is longer than 8 chars - not sure I'll need this part though + define $error
+
+elseif(strlen($pw) < 8 ){
+    $error = "Password should be at least 8 characters long";
 }
 
 // check if passwords match 
 elseif ($pw !== $pwConf){
-    header("Location: signup.php?error=passwordcheck&firstName=" .$firstName. "&lastName=" .$lastName. "&user=" .$user. "&email=" .$email);
+    header("Location: signup.php?error=passwordcheck");
     exit();
 }
 //connect to database with prepared statements
@@ -59,7 +65,7 @@ else {
     $stmt = mysqli_stmt_init($connection);
     // checking database connection
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: signup.php?error=sqlerror&firstName" .$firstName. "&lastName=" .$lastName. "&user=" .$user. "&email=" .$email);
+        header("Location: signup.php?error=sqlerror");
         exit();
     }
     else {
@@ -80,7 +86,7 @@ else {
             $stmt = mysqli_stmt_init($connection);
             // checking connection to database
             if (!mysqli_stmt_prepare($stmt, $sql)) {
-                header("Location: signup.php?error=sqlerror&firstName" .$firstName. "&lastName=" .$lastName. "&user=" .$user. "&email=" .$email);
+                header("Location: signup.php?error=sqlerror");
                 exit();
             }
             else {
