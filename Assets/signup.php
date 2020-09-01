@@ -1,6 +1,6 @@
 <?php
 
-include_once 'db.php';
+include_once 'db/db.php';
 
 ?>
 
@@ -9,7 +9,7 @@ include_once 'db.php';
 <head>
 <title>SIGN UP</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
@@ -18,6 +18,13 @@ include_once 'db.php';
 </head>
 <body>
 
+    <header>
+        <!--Code to include navbar-->
+        <?php include("navbar/navbar.php"); ?>
+        <style><?php include("navbar/navbar.css"); ?></style>
+        <!--END OF Code to include navbar-->
+    <header>
+
         <section id="cover2" class="min-vh-100">
             <div id="cover-caption">
                 <div class="container">
@@ -25,7 +32,7 @@ include_once 'db.php';
                         <div class="col-xl-4 col-lg-5 col-md-6 col-sm-10 mx-auto text-center form p-4">
                             <h1 class="title">SIGN UP</h1>
                                 <div class="px-2 signupform">
-                                    <form action="signup_db.php" method="post" class="needs-validation" novalidate="" >
+                                    <form action="db/signup_db.php" method="post" class="needs-validation" novalidate="" >
                                         <div class="form-group usernameSi">
                                             <input class="form-control mb-3" type="text" name="firstName" placeholder="John" required>
                                         </div>
@@ -72,6 +79,10 @@ include_once 'db.php';
             </div>
         </section>
     
+    <!--Code to include footer-->
+    <?php include("footer/footer.php"); ?>
+    <style><?php include("footer/footer.css"); ?></style>
+    <!--END OF Code to include footer-->
 
         <!--SCRIPTS & Jquery-->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

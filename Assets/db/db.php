@@ -19,6 +19,4 @@ if ($connection === false){
 
 
 
-
-
 ?>

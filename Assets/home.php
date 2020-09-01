@@ -1,8 +1,8 @@
 <?php
 
 // not sure if required
-include_once "db.php";
-include_once "login_db.php";
+include_once "db/db.php";
+include_once "db/login_db.php";
 
 // NEEDS TO BE ADDED TO EVERY PAGE OTHER THAN INDEX, LOGIN, SIGNUP
 session_start();
@@ -17,7 +17,7 @@ if(isset($_SESSION['userN'])){
 }
 else {
     // once session expires, go back to landing page
-    header("location: index.html");
+    header("location: ../index.html");
     // we can add other options here
 }
 
@@ -40,7 +40,7 @@ else {
     <link rel="stylesheet" href="owl/dist/assets/owl.theme.default.css">
 
     <!-- our css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/d9b3bd9a2e.js" crossorigin="anonymous"></script>
     <!-- jQuery -->
@@ -51,7 +51,13 @@ else {
 </head>
 
 <body>
-    <!-- link to php header -->
+    
+    <header>
+        <!--Code to include navbar-->
+        <?php include("navbar/navbar.php"); ?>
+        <style><?php include("navbar/navbar.css"); ?></style>
+        <!--END OF Code to include navbar-->
+    <header>
 
     <div class="headerMain">
         <div class="jumbotron jumbotron-fluid">
@@ -85,7 +91,7 @@ else {
     echo "<p>Top picks for " . $_SESSION['userN'] . "</p>";
 }
 ?>
-    <form action="logout_db.php" method="post">
+    <form action="db/logout_db.php" method="post">
         <button type="submit" class="btn btn-primary" name="logout">LOGOUT</button>
     </form>
 
@@ -207,24 +213,10 @@ else {
 
     </div>
 
-
-
-
-    <!-- <div class="carousel-item">
-                                <a href="images/pictures/gallery/pizza4.jpg">
-                                    <img src="images/pictures/gallery/pizza4s.jpg" class="img-fluid img_gallery"
-                                        alt="pizza with its ingredients around it" />
-                                </a>
-                                <a href="images/pictures/gallery/pizza5.jpg">
-                                    <img src="images/pictures/gallery/pizza5s.jpg" class="img-fluid img_gallery"
-                                        alt="pizza2 with its ingredients around it" />
-                                </a>
-                                <a href="images/pictures/gallery/pizza6.jpg">
-                                    <img src="images/pictures/gallery/pizza6s.jpg" class="img-fluid img_gallery"
-                                        alt="cut pizza" />
-                                </a>
-                            </div> -->
-
+     <!--Code to include footer-->
+     <?php include("footer/footer.php"); ?>
+    <style><?php include("footer/footer.css"); ?></style>
+    <!--END OF Code to include footer-->
 
     <!-- bootstrap links -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -241,7 +233,7 @@ else {
     <script src="owl/docs/assets/vendors/jquery.min.js"></script>
     <script src="owl/dist/owl.carousel.min.js"></script>
     <!-- Carousel settings -->
-    <script src="owl.js"></script>
+    <script src="js/owl.js"></script>
 
 </body>
 

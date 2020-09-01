@@ -19,32 +19,32 @@ else {
 
 //check if any fields are empty
 if (empty($firstName) || empty($lastName) || empty($user) || empty($email) || empty($pw) || empty($pwConf)){
-    header("Location: signup.php?error=emptyfields");
+    header("Location: ../signup.php?error=emptyfields");
     exit();
 }
 //check if first name contains only letters
 elseif (!preg_match("/[a-zA-Z]/", $firstName)){
-    header("Location: signup.php?error=invalidfirstName");
+    header("Location: ../signup.php?error=invalidfirstName");
     exit();
 }
 //check if last name contains only letters
 elseif (!preg_match("/[a-zA-Z]/", $lastName)){
-    header("Location: signup.php?error=invalidlastName&user");
+    header("Location: ../signup.php?error=invalidlastName&user");
     exit();
 }
 // check if email is valid AND username contains only letters and/or numbrs
 elseif (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/[a-zA-Z0-9]/", $user)){
-    header("Location: signup.php?error=invaliduserandemail");
+    header("Location: ../signup.php?error=invaliduserandemail");
     exit();
 }
 // check if user contains only letters and/or numbers
 elseif (!preg_match("/[a-zA-Z0-9]/", $user)){
-    header("Location: signup.php?error=invaliduser");
+    header("Location: ../signup.php?error=invaliduser");
     exit();
 }
 // check if email is valid
 elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-    header("Location: signup.php?error=invalidemail");
+    header("Location: ../signup.php?error=invalidemail");
     exit();
 }
 
@@ -56,7 +56,7 @@ elseif(strlen($pw) < 8 ){
 
 // check if passwords match 
 elseif ($pw !== $pwConf){
-    header("Location: signup.php?error=passwordcheck");
+    header("Location: ../signup.php?error=passwordcheck");
     exit();
 }
 //connect to database with prepared statements
@@ -65,7 +65,7 @@ else {
     $stmt = mysqli_stmt_init($connection);
     // checking database connection
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: signup.php?error=sqlerror");
+        header("Location: ../signup.php?error=sqlerror");
         exit();
     }
     else {
@@ -78,7 +78,7 @@ else {
         $resultscheck = mysqli_query($connection, $sql);
         $row = mysqli_fetch_assoc($resultscheck);
         if ($row >= 1){
-            header("Location: signup.php?error=usertaken");
+            header("Location: ../signup.php?error=usertaken");
         }
         else {
             // prepared statement to insert data into database
@@ -86,7 +86,7 @@ else {
             $stmt = mysqli_stmt_init($connection);
             // checking connection to database
             if (!mysqli_stmt_prepare($stmt, $sql)) {
-                header("Location: signup.php?error=sqlerror");
+                header("Location: ../signup.php?error=sqlerror");
                 exit();
             }
             else {
@@ -95,7 +95,7 @@ else {
                 // submit data to database
                 mysqli_stmt_bind_param($stmt, "sssssi", $firstName, $lastName, $user, $email, $hashedPw, $premium);
                 mysqli_stmt_execute($stmt);
-                header("Location: login.php");
+                header("Location: ../login.php");
                 exit();
             }
         }

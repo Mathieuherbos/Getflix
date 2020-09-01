@@ -19,7 +19,7 @@
 }
 
 #cover {
-  background: #222 url("catnet.jpg") center center no-repeat;
+  background: #222 url("../images/netcat.jpg") center center no-repeat;
   background-size: cover;
   height: 100%;
   text-align: center;
@@ -29,7 +29,7 @@
 }
 
 #cover2 {
-  background: #222 url("lookcat.jpg") center center no-repeat;
+  background: #222 url("../images/lookcat.jpg") center center no-repeat;
   background-size: cover;
   height: 100%;
   text-align: center;
@@ -39,7 +39,7 @@
 }
 
 #cover3 {
-  background: #222 url("catbutterfly.jpg") center center no-repeat;
+  background: #222 url("../images/catbutterfly.jpg") center center no-repeat;
   background-size: cover;
   height: 100%;
   text-align: left;
@@ -100,7 +100,7 @@ input[type="password"] {
 
 .jumbotron {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("cat1.jpg");
+    url("../images/cat1.jpg");
   background-position: center;
   background-size: cover;
   text-align: center;

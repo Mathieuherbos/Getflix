@@ -9,7 +9,7 @@
     
     //checking if fields are empty
     if (empty($user) || empty($pw)) {
-        header("Location: login.php?error=emptyfields");
+        header("Location: ../login.php?error=emptyfields");
         exit();
     }
     
@@ -20,7 +20,7 @@
         $stmt = mysqli_stmt_init($connection);
         // check if there is a connection error
         if (!mysqli_stmt_prepare($stmt, $sql)) {
-            header("Location: login.php?error=sqlerror");
+            header("Location: ../login.php?error=sqlerror");
             exit();
         }
         else {
@@ -31,7 +31,7 @@
             if ($row = mysqli_fetch_assoc($results)){
                 $pwCheck = password_verify($pw, $row['password']);
                 if ($pwCheck == false) {
-                    header("Location: login.php?error=wrongpassword");
+                    header("Location: ../login.php?error=wrongpassword");
                     exit();
                 }
                 elseif ($pwCheck == true) {
@@ -39,16 +39,16 @@
                     session_start();
                     $_SESSION['userN'] = $row['userName'];
                     $_SESSION['userId'] = $row['ID'];
-                    header("Location: home.php");
+                    header("Location: ../home.php");
 
                 }
                 else {
-                    header("Location: login.php?error=codingerror");
+                    header("Location: ../login.php?error=codingerror");
                     exit();
                 }
             }
             else {
-                header("Location: login.php?error=nouserfound");
+                header("Location: ../login.php?error=nouserfound");
                 exit();
             }
         }
