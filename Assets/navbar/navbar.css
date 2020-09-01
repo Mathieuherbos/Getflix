@@ -3,7 +3,7 @@
 
 .navbar{
     z-index: 10;
-    position: fixed;
+    position: absolute;
     top: 0;
 }
 /* navbar labels */
