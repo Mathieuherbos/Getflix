@@ -48,12 +48,6 @@ elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)){
     exit();
 }
 
-//!check if password is longer than 8 chars - not sure I'll need this part though + define $error
-
-elseif(strlen($pw) < 8 ){
-    $error = "Password should be at least 8 characters long";
-}
-
 // check if passwords match 
 elseif ($pw !== $pwConf){
     header("Location: ../signup.php?error=passwordcheck");

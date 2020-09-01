@@ -14,9 +14,11 @@
   color: rgb(240, 237, 230);
 }
 
+/* SIGN UP FORM */
 .signupform {
   color: rgb(240, 237, 230);
 }
+
 
 #cover {
   background: #222 url("../images/netcat.jpg") center center no-repeat;
@@ -31,7 +33,7 @@
 #cover2 {
   background: #222 url("../images/lookcat.jpg") center center no-repeat;
   background-size: cover;
-  height: 100%;
+  width: 100%;
   text-align: center;
   display: flex;
   align-items: center;
@@ -86,6 +88,7 @@ input[type="password"] {
   color: rgb(15, 15, 15);
 }
 
+
 .title {
   color: rgb(243, 240, 237);
   font-family: "Archivo Black", sans-serif;
@@ -94,6 +97,17 @@ input[type="password"] {
 
 .form-radio {
   padding-top: 1em;
+}
+
+/* SIGN UP FORM Validation */
+
+.valid-feedback, .invalid-feedback{
+  font-size: 1em;
+  font-weight: lighter;
+}
+
+.invalid-feedback{
+  color: red;
 }
 
 /* home.php */

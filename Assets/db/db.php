@@ -2,8 +2,8 @@
 
 $dbServer = 'localhost';
 $dbUserName = "root";
-$dbPw = "";
-$dbName = "test_1";
+$dbPw = "oomMsuEtWw7uevMZ";
+$dbName = "userdb_2";
 
 $connection = mysqli_connect($dbServer, $dbUserName, $dbPw, $dbName);
 
