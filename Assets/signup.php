@@ -34,17 +34,17 @@ include_once 'db/db.php';
                                 <div class="px-2 form signupform min-vh-100">
                                     <form action="/Assets/db/signup_db.php" method="post" class="needs-validation" novalidate>
                                         <div class="form-group usernameSi">
-                                            <input class="form-control mb-3" type="text" name="firstName" placeholder="John" required pattern="[a-zA-Z]">
-                                            <div class="valid-feedback">Valid password</div>
+                                            <input class="form-control mb-3" type="text" name="firstName" placeholder="John" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$">
+                                           
                                             <div class="invalid-feedback">Please enter valid name, no </div>
                                         </div>
                                         <div class=" form-group usernameSi">
-                                            <input class="form-control mb-3"type="text" name="lastName" placeholder="Doe" required pattern="[a-zA-Z]">  
+                                            <input class="form-control mb-3"type="text" name="lastName" placeholder="Doe" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$">  
                                             <div class="invalid-feedback">Please enter a valid lastname</div>
                                         </div>
 
                                         <div class="form-group passwordSi">
-                                            <input class="form-control mb-3" type="text" name="user" placeholder="User name : JD123" required pattern="[a-zA-Z0-9]">
+                                            <input class="form-control mb-3" type="text" name="user" placeholder="User name : JD123" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z0-9]*)*$">
                                 
                                                 <div class="invalid-feedback">Please enter a valid username</div>
                                         </div>
