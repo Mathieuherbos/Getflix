@@ -2,8 +2,8 @@
 
 $dbServer = 'localhost';
 $dbUserName = "root";
-$dbPw = "oomMsuEtWw7uevMZ";
-$dbName = "userdb_2";
+$dbPw = "";
+$dbName = "catflix";
 
 $connection = mysqli_connect($dbServer, $dbUserName, $dbPw, $dbName);
 
