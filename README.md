@@ -175,11 +175,11 @@ _NAV BAR_
 
 _LANDING & STREAMING_
 
-![landing and streaming pages](land-stream.jpg)
+![landing and streaming pages](readme-img/land-stream.jpg)
 
 _HOME & SIGNUP/LOGIN_
 
-![home and signup/login pages](home-signup.jpg)
+![home and signup/login pages](readme-img/home-signup.jpg)
 
 ### Mid project
 
