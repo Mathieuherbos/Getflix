@@ -10,10 +10,7 @@
 4. Concept evolution
 5. Resources
 6. Acknowledgements
-7.
-8.
-9.
-10.
+
 
 ## The project
 
@@ -36,7 +33,7 @@ The aim of this project is to.....
 
 - Make a new account
 - Password confirmation for security
-- Password complexity for security
+- Password length of 8 char requirements
 - Sign up for premium access
 - A beautiful cat picture
 
@@ -49,14 +46,17 @@ The aim of this project is to.....
 
 - **Navigation bar** for ease of traversing through the site
 - **Log out** option, ending the session and returning to the _landing page_
-- **Search bar** to search for videos or genres
-- **6 categories** of videos for the user to browse
+- **Search bar** to search for videos
+- **4 genred** of videos for the user to browse
+- **Filter by genre** to display all videos for that genre
 - A **sample of videos** for each category leading to the _video player page_
 - **Footer section** with logo, sitemap and contact details
 
 #### Results page
 
 - View **all results** from the search
+
+WORK IN PROGRESS
 
 #### Video player page
 
@@ -75,9 +75,9 @@ The aim of this project is to.....
 
 #### Security
 
-- Prepared statements with mysqli
+- Prepared statements
 - Password hashing
-- Password complexity
+- Password restriction by length
 - Password confrimation (repeating the password entered)
 - Limiting characters able to be sent to the database
 - Passing entered data as a string so that it cannot be considered code
@@ -153,10 +153,9 @@ The site is constructed as follows:
 
 ### Proposed timeline
 
-It was proposed that the must-have features of the site should be complete between Friday of the first ween and Tuesday of the second week.
-A preliminary merge of all completed work is planned for Monday of the second week.
-
-All main features should be completed by Wednesday end of day of the second week to leave Thursday and Friday of the second week to fix any outstanding issues, consolidate the last pieces of the styling, and review the Lighthouse score.
+It was proposed that the must-have features of the site should be mostly complete and deployable by Friday week 2
+A preliminary merge of all completed work and git folder organisation occured on Wednesday of the second week. All up to date and integrated work is published here.
+All main features of the project should be completed by Wednesday of the third week end of day to leave Thursday and Friday  to fix any outstanding issues, consolidate the last pieces of the styling, and review the Lighthouse score.
 
 ### Completed stages
 
@@ -167,6 +166,24 @@ All main features should be completed by Wednesday end of day of the second week
 We based the idea of our landing index page on the following concept:
 
 ![initial concept](readme-img/landing_initial-concept.jpg)
+
+Using trello, we established the following base designs:
+
+_NAV BAR_
+
+![nav bar header](readme-img/navbar-init.jpg)
+
+_LANDING & STREAMING_
+
+![landing and streaming pages](land-stream.jpg)
+
+_HOME & SIGNUP/LOGIN_
+
+![home and signup/login pages](home-signup.jpg)
+
+### Mid project
+
+#### Pages
 
 As we decided on the "Cat" theme, a preliminary design for each page was formed using mainly bootstrap. With the base structure of these made, we were able to create and test our javascript, PHP and SQL code.
 
@@ -179,13 +196,40 @@ As we decided on the "Cat" theme, a preliminary design for each page was formed 
 ![home page](readme-img/home1-1.JPG)
 ![home page](readme-img/home1-2.jpg)
 
-_Inspiration for the design of this site was taken from Netflix_
+#### Database setup
 
-In planning for the movie database table, as each row would contain multiple columns of information, excel was used for organisational purposes and then uploaded to the database via a csv file.
+The database setup currently contains 3 tables.
 
-![movie db](readme-img/moviedbexcel1.jpg)
+![db1](readme-img/db1.jpg)
 
-### Mid project
+_Youtube_
+
+The YouTube database contains:
+ * A youtube link
+ * Movie description
+ * Movie runtime
+ * Movie release date
+ * Movie rating (IMDB)
+ * Movie image thumbnail
+
+![youtube table](readme-img/db-yt.jpg)
+
+
+_Users_
+
+To sign up and login/ create a session:
+
+![user table](readme-img/db-users.jpg)
+
+_Comments_
+
+Linked to the youtube and users tables:
+IN PROGRESS
+
+![comments table](readme-img/db-comments.jpg)
+
+
+#### Other
 
 TheMovieDB.org was implemented and tested in plain HTML:
 
@@ -218,6 +262,7 @@ TheMovieDB.org was implemented and tested in plain HTML:
 ### Coding
 
 - [Signup/login system](https://www.youtube.com/watch?v=LC9GaXkdxF8)
+- [Comments](
 
 ### Youtube trailers for movie database
 
