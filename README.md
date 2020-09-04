@@ -110,22 +110,22 @@ _Common tasks_
 
 _Other tasks_
 
-[x] Research hosting site - Mathieu & Nicolas
-[x] User management: backend - Ashleigh
-[x] User management: frontend - Khadija
-[x] Page design: Landing, signup, login, results - Nicolas
-[x] Page design: Navbar & Footer - Khadija
-[x] Page design: Home - Ashleigh
-[x] Page design: Streaming - Mathieu
-[x] Search function - Khadija
-[x] Comments section - Ashleigh 
-[x] Fetch & displaly API data (TMDb) - Khadija 
-[ ] Filtering by genre - ?
-[ ] Newslette - ?
-[ ] CRUD - ?
-[ ] lost passwords - ?
-[ ] Password show/hide button (eye) - Khadija
-[ ] Lightmode/ darkmode - ?
+- [x] Research hosting site - Mathieu & Nicolas
+- [x] User management: backend - Ashleigh
+- [x] User management: frontend - Khadija
+- [x] Page design: Landing, signup, login, results - Nicolas
+- [x] Page design: Navbar & Footer - Khadija
+- [x] Page design: Home - Ashleigh
+- [x] Page design: Streaming - Mathieu
+- [x] Search function - Khadija
+- [x] Comments section - Ashleigh 
+- [x] Fetch & displaly API data (TMDb) - Khadija 
+- [ ] Filtering by genre - ?
+- [ ] Newslette - ?
+- [ ] CRUD - ?
+- [ ] lost passwords - ?
+- [ ] Password show/hide button (eye) - Khadija
+- [ ] Lightmode/ darkmode - ?
 
 
 ### Process
