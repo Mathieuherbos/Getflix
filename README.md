@@ -98,7 +98,37 @@ WORK IN PROGRESS
 - Mathieu Herbos
 - Ashleigh Templeton
 
-### Task management & project handling
+### Task management 
+
+_Common tasks_
+
+* Design with Figma
+* Database establishment
+* Merging, file management, testing
+* Final styling 
+* Lighthouse updating
+
+_Other tasks_
+
+[x] Research hosting site - Mathieu & Nicolas
+[x] User management: backend - Ashleigh
+[x] User management: frontend - Khadija
+[x] Page design: Landing, signup, login, results - Nicolas
+[x] Page design: Navbar & Footer - Khadija
+[x] Page design: Home - Ashleigh
+[x] Page design: Streaming - Mathieu
+[x] Search function - Khadija
+[x] Comments section - Ashleigh 
+[x] Fetch & displaly API data (TMDb) - Khadija 
+[ ] Filtering by genre - ?
+[ ] Newslette - ?
+[ ] CRUD - ?
+[ ] lost passwords - ?
+[ ] Password show/hide button (eye) - Khadija
+[ ] Lightmode/ darkmode - ?
+
+
+### Process
 
 The development team utilised scrum methodology to manage the project tasks.
 They used:
@@ -157,7 +187,6 @@ It was proposed that the must-have features of the site should be mostly complet
 A preliminary merge of all completed work and git folder organisation occured on Wednesday of the second week. All up to date and integrated work is published here.
 All main features of the project should be completed by Wednesday of the third week end of day to leave Thursday and Friday  to fix any outstanding issues, consolidate the last pieces of the styling, and review the Lighthouse score.
 
-### Completed stages
 
 ## Concept evolution
 
@@ -248,6 +277,7 @@ TheMovieDB.org was implemented and tested in plain HTML:
 - Web design: [Bootstrap 4](https://getbootstrap.com/)
 - Web design - icons: [Font Awesome](https://fontawesome.com/)
 - Carousel: [Owl.Carousel.js](https://owlcarousel2.github.io/OwlCarousel2/)
+- Top rated movie API [TMDb](https://www.themoviedb.org/documentation/api)
 
 ### Planning
 
@@ -266,31 +296,8 @@ TheMovieDB.org was implemented and tested in plain HTML:
 
 ### Youtube trailers for movie database
 
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
--
+LINK TO EXCEL 
 
 ## Acknowledgements
 
-We would like to thank.....
+We would like to thank our brain, patience, motivation and everyone's cats.
