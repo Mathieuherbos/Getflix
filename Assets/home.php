@@ -97,117 +97,117 @@ else {
 
     <h2>Our top picks for you ~</h2>
 
-    <!-- Comedy -->
-    <h3>Comedy</h3>
-    <div class="owl-carousel owl-theme">
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
+<!-- random picks -->
+<?php
 
-    </div>
+//  random videos
+$bdd = new PDO ('mysql:host=sql100.epizy.com;port=3306;dbname=epiz_26591763_catflix','epiz_26591763','nNU2fD6vzKC', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+?>
 
-    <!-- Action -->
-    <h3>Action</h3>
-    <div class="owl-carousel owl-theme">
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
-        <div class="item">
-            <a href="cat1.jpg">
-                <img src="cat1.jpg" class="img-fluid img_gallery" alt="Shrek" />
-            </a>
-        </div>
 
-    </div>
+
+
+<!--ACTION-->
+<div class="owl-carousel owl-theme">         
+    <?php
+    $reponse = $bdd->query("SELECT * FROM youtubeinfos WHERE types LIKE 'Action' ORDER BY RAND() LIMIT 10");
+    ?>
+    
+    <?php
+    while ($datas = $reponse->fetch())
+    {
+    ?>
+    
+        <div class="item">
+        
+            <a href='streaming.php?id=<?php echo ($datas['id']);?>'>
+            <img class="img-fluid img_gallery" 
+                src="
+                    <?php
+                            //images from db
+                            echo ($datas['images']); 
+                    ?>
+                " alt="
+                    <?php
+                            //alt from db
+                            echo ($datas['alt']); 
+                    ?>
+            "/></a>
+        </div>
+    
+    <?php
+    } 
+    ?>
+</div>
+
+<!--COMEDY-->
+<div class="owl-carousel owl-theme">         
+    <?php
+    $reponse = $bdd->query("SELECT * FROM youtubeinfos WHERE types LIKE 'Comedy' ORDER BY RAND() LIMIT 10");
+    ?>
+    
+    <?php
+    while ($datas = $reponse->fetch())
+    {
+    ?>
+    
+        <div class="item">
+            <a method='get' id='getLink' href='streaming.php?id=<?php
+                        echo ($datas['id']);
+                ?>'>
+            <img class="img-fluid img_gallery" 
+                src="images/
+                    <?php
+                            //images from db
+                            echo ($datas['images']); 
+                    ?>
+                " alt="
+                    <?php
+                            //alt from db
+                            echo ($datas['alt']); 
+                    ?>
+            "/></a>
+        </div>
+    
+    <?php
+    } 
+    ?>
+</div>
+
+<!--THRILLER-->
+<div class="owl-carousel owl-theme">         
+    <?php
+    $reponse = $bdd->query("SELECT * FROM youtubeinfos WHERE types LIKE 'Thriller' ORDER BY RAND() LIMIT 10");
+    ?>
+    
+    <?php
+    while ($datas = $reponse->fetch())
+    {
+    ?>
+    
+        <div class="item">
+            <a method='get' id='getLink' href='streaming.php?id=
+                <?php //add id to get the right streaming.php 
+                        echo ($datas['id']);
+                ?>'>
+            <img class="img-fluid img_gallery" 
+                src="images/
+                    <?php
+                            //images from db
+                            echo ($datas['images']); 
+                    ?>"
+                 alt="
+                    <?php
+                            //alt from db
+                            echo ($datas['alt']); 
+                    ?>
+            "/></a>
+        </div>
+    
+    <?php
+    } 
+    ?>
+</div>
 
 
 

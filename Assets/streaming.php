@@ -9,30 +9,27 @@
     <body>
         <div class="container">
             <?php
-                $bdd = new PDO ('mysql:host=sql100.epizy.com;port=3306;dbname=epiz_26591763_catflix','epiz_26591763','nNU2fD6vzKC', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-                $reponse = $bdd->query ('SELECT * FROM youtubeinfos');
-                while ($datas = $reponse -> fetch())
-                {
-                    echo 
-                        '<iframe class="responsive-iframe" src="' . $datas['link'] . '">
-                        </iframe>';
-                }
-            ?>               
-        </div>
-        <div class="container-fluid" id="description">
-            <?php
-                $reponse = $bdd->query ('SELECT * FROM youtubeinfos');
-                while ($datas = $reponse -> fetch())
-                        {
-                            echo 
-                                '<h2>' . $datas['title'] . '</h2>
-                                <p>' . $datas['description'] . '</p>
-                                <div id="type"><h5>Type : ' . $datas['types'] . ' </h5></div>
-                                <div id="duration"><h5>Duration : ' . $datas['duration'] . ' min </h5></div>
-                                <div id="release"><h5>Release date : ' . $datas['releaseDate'] . '</h5></div>
-                                <div id="rating"><h5>Rating : ' . $datas['rating'] . '</h5></div>';
-                        }
+                $bdd = new PDO ('mysql:host=localhost;port=3306;dbname=getflixtest','root','', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+                if(isset($_GET['id'])) {
+                    $getid = intval($_GET['id']);
+                    $reponse = $bdd->prepare('SELECT * FROM youtubeinfos WHERE id = ?');
+                    $reponse->execute(array($getid));
+                    $datas = $reponse->fetch();
             ?>
+            <iframe class="responsive-iframe" src="<?php echo ($datas['link']); ?>">
+            </iframe>              
         </div>
+
+        <div class="container-fluid" id="description">    
+                    <h2><?php echo ($datas['title']); ?></h2>
+                    <p><?php echo ($datas['description']); ?></p>
+                    <div id="type"><h5><?php echo ($datas['types']); ?></h5></div>
+                    <div id="duration"><h5><?php echo ($datas['duration']); ?></h5></div>
+                    <div id="release"><h5>Release date : <?php echo ($datas['releaseDate']); ?></h5></div>
+                    <div id="rating"><h5>Rating : <?php echo ($datas['rating']); ?></h5></div>
+        </div>
+        <?php 
+            }
+        ?>
     </body>
 </html>
