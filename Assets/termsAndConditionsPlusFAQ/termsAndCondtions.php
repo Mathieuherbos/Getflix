@@ -12,8 +12,8 @@
     <body>
         <header>
             <!--Code to include navbar-->
-            <?php include("navbar/navbar.php"); ?>
-            <style><?php include("navbar/navbar.css"); ?></style>
+            <?php include("../navbar/navbar.php"); ?>
+            <style><?php include("../navbar/navbar.css"); ?></style>
             <!--END OF Code to include navbar-->
         <header>
         <h2><strong>Terms and Conditions</strong></h2>
@@ -141,8 +141,8 @@
         <p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
         
         <!--Code to include footer-->
-        <?php include("footer/footer.php"); ?>
-        <style><?php include("footer/footer.css"); ?></style>
+        <?php include("../footer/footer.php"); ?>
+        <style><?php include("../footer/footer.css"); ?></style>
         <!--END OF Code to include footer-->
     </body>
 </html>
