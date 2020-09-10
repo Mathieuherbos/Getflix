@@ -285,7 +285,7 @@ _HOME_
 
 ![home page](readme-img/home2-1.jpg)
 ![home page](readme-img/home2-2.jpg)
-![home page](readme-imghome2-3./jpg)
+![home page](readme-img/home2-3.jpg)
 
 
 _STREAMING_
@@ -360,7 +360,7 @@ _Newsletter_
 
 ### Youtube trailers for movie database
 
-[See in Excel](...)
+[See in Excel](assets/db/youtubeinfos.csv)
 
 ## Acknowledgements
 
