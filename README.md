@@ -269,51 +269,64 @@ TheMovieDB.org was implemented and tested in plain HTML:
 
 _INDEX_
 
-![index page](readme-img/jpg)
+![index page](readme-img/index2.jpg)
 
 _SIGN UP_
 
-![sign up page](readme-img/jpg)
+![sign up page](readme-img/signup2.jpg)
 
 
 _LOGIN_
 
-![login page](readme-img/jpg)
+![login page](readme-img/login2.jpg)
 
 
 _HOME_
 
-![home page](readme-img/jpg)
+![home page](readme-img/home2-1.jpg)
+![home page](readme-img/home2-2.jpg)
+![home page](readme-imghome2-3./jpg)
 
 
 _STREAMING_
 
-![streaming page](readme-img/jpg)
+![streaming page](readme-img/streaming2-1.jpg)
+![streaming page](readme-img/streaming2-2.jpg)
 
 
 _BEST RATED (api)_
 
-![best rated page](readme-img/jpg)
+![best rated page](readme-img/api.jpg)
 
 
-_ACTION-COMEDY-THRILLER_
+_ALL-ACTION-COMEDY-THRILLER_
 
-![filter page](readme-img/jpg)
+![filter page](readme-img/filter.jpg)
 
 
 _SEARCH RESULTS_
 
-![search page](readme-img/jpg)
+![search page](readme-img/search.jpg)
 
 
 _FAQ_
 
-![faq page](readme-img/jpg)
+![faq page](readme-img/faq.jpg)
 
 
 _TERMS AND CONDITIONS_
 
-![t&cs page](readme-img/jpg)
+![t&cs page](readme-img/tc.jpg)
+
+
+_NAVBAR_
+
+![NAVBAR](readme-img/navbar.jpg)
+
+
+_FOOTER_
+
+![FOOTER](readme-img/footer.jpg)
 
 
 _Newsletter_
