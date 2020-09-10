@@ -3,8 +3,9 @@
 
 .navbar{
     z-index: 10;
-    position: relative;
+    position: relative!important;
     top: 0;
+    background-color: white;
 }
 /* navbar labels */
 .navbar-brand{
@@ -56,4 +57,10 @@ li{
 .fa-cog, .fa-envelope, .fa-power-off{
 
     padding-right: 1em;
+}
+
+/* dropdown User */
+
+.dropdown-toggle::after {
+    margin-left: 2.2em;
 }

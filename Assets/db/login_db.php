@@ -32,6 +32,7 @@
                 $pwCheck = password_verify($pw, $row['password']);
                 if ($pwCheck == false) {
                     header("Location: ../login.php?error=wrongpassword");
+                    // $pwMessage = "Password incorrect";
                     exit();
                 }
                 elseif ($pwCheck == true) {
@@ -49,6 +50,7 @@
             }
             else {
                 header("Location: ../login.php?error=nouserfound");
+                // $userMessage= "Username not found";
                 exit();
             }
         }
@@ -59,39 +61,4 @@
 //     header("Location: login.php?SUCCESS");
 //     exit();
 // }
-
-
-
-
-
-// include 'db.php';
-
-//     if($_SERVER['REQUEST_METHOD'] == "POST") {
-
-//         $myUser = mysqli_real_escape_string($connection, $_POST['user']);
-//         $myPw = mysqli_real_escape_string($connection, $_POST['pw']);
-
-//         $sql = "SELECT userName FROM userdb WHERE userName = '$myUser' AND pw = '$myPw';";
-//         $result = mysqli_query($connection, $sql);
-//         $row = mysqli_fetch_array($result, mysqli_assoc);
-//         $active = $row['active'];
-
-//         $count = mysqli_num_rows($result);
-
-//         //if result matches $myUser and $myPw, the table row must be 1 row
-
-//         if($count == 1) {
-//             //session_register("myusername"); //not sure where myusername refers to
-//             $_SESSION['login_user'] = $myUser; //not sure where login_user refers to
-
-//             header("location: login.php?SUCCESS");
-//         } elseif ($count !== 1) {
-//             header("location: login.php?userorpwwrong");
-//         }
-//     }
-//     else {
-//         header("Location: login.php?codingerror");
-//     }
-
-
 

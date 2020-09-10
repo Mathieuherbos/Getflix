@@ -2,6 +2,8 @@
 
 include_once 'db.php';
 
+//new PDO ('mysql:host=sql100.epizy.com;port=3306;dbname=epiz_26591763_catflix','epiz_26591763','nNU2fD6vzKC', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
 $firstName = mysqli_real_escape_string($connection, $_POST['firstName']);
 $lastName = mysqli_real_escape_string($connection, $_POST['lastName']);
 $user = mysqli_real_escape_string($connection, $_POST['user']);
@@ -45,6 +47,14 @@ elseif (!preg_match("/[a-zA-Z0-9]/", $user)){
 // check if email is valid
 elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)){
     header("Location: ../signup.php?error=invalidemail");
+    exit();
+}
+
+//!check if password is longer than 8 chars - not sure I'll need this part though + define $error
+
+elseif(strlen($pw) < 8 ){
+    $error = "Password should be at least 8 characters long";
+        header("Location: ../signup.php?error=passwordnot8chars");
     exit();
 }
 

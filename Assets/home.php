@@ -11,11 +11,7 @@ session_start();
 
 <!-- for header -->
 <?php 
-if(isset($_SESSION['userN'])){
-    echo "<p>Welcome " . $_SESSION['userN'] . "</p>";
-    // we can also do the same with the user ID
-}
-else {
+if(!isset($_SESSION['userN'])){
     // once session expires, go back to landing page
     header("location: ../index.html");
     // we can add other options here
@@ -32,6 +28,8 @@ else {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/paw.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
     <!-- bootstrap link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -51,7 +49,28 @@ else {
 </head>
 
 <body>
+    <style>
+    body {
+        background-color: #000000;
+        
+    }
+
+    h1, h2, h3, h4, h5, p {
+            color: #FFFFFF;
+        }
     
+    h1 {
+        font-family: "Archivo Black", sans-serif;
+    }
+
+    h2, h3, h4, h5, p {
+        font-family: "Roboto", sans-serif;
+    }
+
+    .lead {
+        font-size: 0.7em;
+    }
+    </style>
     <header>
         <!--Code to include navbar-->
         <?php include("navbar/navbar.php"); ?>
@@ -65,39 +84,39 @@ else {
             <div class="container">
                 <div class="heading">
                     <h1>Catflix</h1>
-                    <p class="lead">Watch, laugh, meow <i class="fas fa-paw"></i></p>
+                    <p class="lead" style="font-size: 1.6em; text-align:center; text-shadow: 3px 4px 7px rgb(31, 29, 29);">Watch, laugh, meow <i class="fas fa-paw"></i></p>
                 </div>
 
-                <form>
+                <form action="searchbar.php" method="GET" target="_self">
                     <div class="form-group">
-
-                        <label for="input-group">Search movies</label>
+                   
+                        <label for="input-group" style="font-size:1.1em;font-style:normal;"><p>Search movies</p></label>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="e.g. Shrek">
+                            <input type="text" name="search" class="form-control" placeholder="e.g. Shrek">
                             <div class="input-group-append">
-                                <button class="btn btn-danger" type="button">
+                                <button class="btn btn-danger" name="submit" type="submit">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </div>
                         </div>
+                         
                     </div>
                 </form>
+               
             </div>
         </div>
-
     </div>
+ 
+   
 
     <?php if(isset($_SESSION['userN'])){
-    echo "<p>Top picks for " . $_SESSION['userN'] . "</p>";
-}
-?>
-    <form action="db/logout_db.php" method="post">
-        <button type="submit" class="btn btn-primary" name="logout">LOGOUT</button>
-    </form>
+    echo "<h2><b>Top picks for </b><em>" . $_SESSION['userN'] . "</em></h2>";
+    }
+    ?>
+    
 
-    <h2>Our top picks for you ~</h2>
 
-<!-- random picks -->
+    <!-- random picks -->
 <?php
 
 //  random videos
@@ -108,6 +127,7 @@ $bdd = new PDO ('mysql:host=sql100.epizy.com;port=3306;dbname=epiz_26591763_catf
 
 
 <!--ACTION-->
+<h3>Action movies</h3>
 <div class="owl-carousel owl-theme">         
     <?php
     $reponse = $bdd->query("SELECT * FROM youtubeinfos WHERE types LIKE 'Action' ORDER BY RAND() LIMIT 10");
@@ -120,8 +140,43 @@ $bdd = new PDO ('mysql:host=sql100.epizy.com;port=3306;dbname=epiz_26591763_catf
     
         <div class="item">
         
-            <a href='streaming.php?id=<?php echo ($datas['id']);?>'>
-            <img class="img-fluid img_gallery" 
+            <a class="didjou" href='streaming.php?id=<?php echo ($datas['id']);?>'>
+            <img class="img-fluid img_gallery" style="height:13.4em;"
+                src="
+                    <?php
+                            //images from db
+                            echo ($datas['images']); 
+                    ?>" 
+                alt="
+                    <?php
+                            //alt from db
+                            echo ($datas['alt']); 
+                    ?>
+            "/></a>
+        </div>
+    
+    <?php
+    } 
+    ?>
+</div>
+
+<!--COMEDY-->
+<h3>Comedy movies</h3>
+<div class="owl-carousel owl-theme">         
+    <?php
+    $reponse = $bdd->query("SELECT * FROM youtubeinfos WHERE types LIKE 'Comedy' ORDER BY RAND() LIMIT 10");
+    ?>
+    
+    <?php
+    while ($datas = $reponse->fetch())
+    {
+    ?>
+    
+        <div class="item">
+            <a method='get' id='getLink' href='streaming.php?id=<?php
+                        echo ($datas['id']);
+                ?>'>
+            <img class="img-fluid img_gallery" style="height:13.4em;"
                 src="
                     <?php
                             //images from db
@@ -140,41 +195,8 @@ $bdd = new PDO ('mysql:host=sql100.epizy.com;port=3306;dbname=epiz_26591763_catf
     ?>
 </div>
 
-<!--COMEDY-->
-<div class="owl-carousel owl-theme">         
-    <?php
-    $reponse = $bdd->query("SELECT * FROM youtubeinfos WHERE types LIKE 'Comedy' ORDER BY RAND() LIMIT 10");
-    ?>
-    
-    <?php
-    while ($datas = $reponse->fetch())
-    {
-    ?>
-    
-        <div class="item">
-            <a method='get' id='getLink' href='streaming.php?id=<?php
-                        echo ($datas['id']);
-                ?>'>
-            <img class="img-fluid img_gallery" 
-                src="images/
-                    <?php
-                            //images from db
-                            echo ($datas['images']); 
-                    ?>
-                " alt="
-                    <?php
-                            //alt from db
-                            echo ($datas['alt']); 
-                    ?>
-            "/></a>
-        </div>
-    
-    <?php
-    } 
-    ?>
-</div>
-
 <!--THRILLER-->
+<h3>Thriller movies</h3>
 <div class="owl-carousel owl-theme">         
     <?php
     $reponse = $bdd->query("SELECT * FROM youtubeinfos WHERE types LIKE 'Thriller' ORDER BY RAND() LIMIT 10");
@@ -190,8 +212,8 @@ $bdd = new PDO ('mysql:host=sql100.epizy.com;port=3306;dbname=epiz_26591763_catf
                 <?php //add id to get the right streaming.php 
                         echo ($datas['id']);
                 ?>'>
-            <img class="img-fluid img_gallery" 
-                src="images/
+            <img class="img-fluid img_gallery" style="height:13.4em;""
+                src="
                     <?php
                             //images from db
                             echo ($datas['images']); 
@@ -219,6 +241,7 @@ $bdd = new PDO ('mysql:host=sql100.epizy.com;port=3306;dbname=epiz_26591763_catf
     <!--END OF Code to include footer-->
 
     <!-- bootstrap links -->
+   
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

@@ -1,9 +1,11 @@
 <?php
 
-$dbServer = 'localhost';
-$dbUserName = "root";
-$dbPw = "";
-$dbName = "catflix";
+$dbServer = 'sql100.epizy.com';
+//$dbServer = "185.27.134.10";
+$dbUserName = "epiz_26591763";
+$dbPw = "nNU2fD6vzKC";
+$port="3306";
+$dbName = "epiz_26591763_catflix";
 
 $connection = mysqli_connect($dbServer, $dbUserName, $dbPw, $dbName);
 

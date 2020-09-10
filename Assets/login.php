@@ -1,8 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/paw.png" type="image/png">
     <title>LOGIN</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet"      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -10,12 +13,7 @@
 </head>
     <body>
 
-    <header>
-        <!--Code to include navbar-->
-        <?php include("navbar/navbar.php"); ?>
-        <style><?php include("navbar/navbar.css"); ?></style>
-        <!--END OF Code to include navbar-->
-    <header>
+
         <section id="cover" class="min-vh-100">
             <div id="cover-caption">
                 <div class="container">
@@ -24,16 +22,16 @@
                             <h1 class="title">SIGN IN</h1>
                             <div class="px-2 signinform">
                                 <form action="db/login_db.php" method="post">
-                                    <div class="usernameSi">
+                                    <div class="form-group usernameSi">
                                         <p>User name</p>
                                     </div>
-                                <input type="text" name="user" placeholder="">
+                                <input class="form-control mb-3" type="text" name="user" placeholder="Shinee321">
                                     <div class="passwordSi">
                                         <p>Password</p>
                                     </div>
-                                <input type="password" name="pw" placeholder="">
+                                <input class="form-control mb-3" type="password" name="pw" placeholder="********">
                                 <br>
-                                <button type="submit" name="submit" class="btn btn-outline-light gobtn"><b>GO ! <i class="fa fa-paw animate__animated animate__fadeIn" aria-hidden="true"></i></b></button>
+                                <button type="submit" name="submit" class="btn btn-danger gobtn"><b>GO ! <i class="fa fa-paw animate__animated animate__fadeIn" aria-hidden="true"></i></b></button>
                                 </form>
                             </div>
                         </div>
@@ -41,11 +39,7 @@
                 </div>
             </div>
         </section>
-
-    <!--Code to include footer-->
-    <?php include("footer/footer.php"); ?>
-    <style><?php include("footer/footer.css"); ?></style>
-    <!--END OF Code to include footer-->
+       
 
     </body>
 </html>

@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="footer font-small special-color-dark">
+<footer class="footer fixed-bottom font-small special-color-dark">
   <!-- Footer Elements -->
   <div class="container">
     
@@ -23,18 +23,18 @@
       </div>
       <!-- Grid column -->
       <div class="col-sm">
-        <div class="col-sm-4 col-md-8 col-lg-12">
+        <div class="col-sm-4  col-lg-12">
         <!-- Links -->
             <h5 class="font-weight-medium text-uppercase text-white mt-5 mb-3">Any questions?</h5>
               <ul class="list-unstyled text-white">
                 <li>
-                  <a href="#!" class="text-white">Call 0800-XXX-XX</a>
+                  <a id="link1" href="#!" class="text-white">Call 0800-XXX-XX</a>
                 </li>
                 <li>
-                  <a href="#!" class="text-white">FAQ</a>
+                  <a id="link2" href="faq.php" class="text-white">FAQ</a>
                 </li>
                 <li>
-                  <a href="#!" class="text-white">Terms of Use</a>
+                  <a id="link3" href="termsAndCondtions.php" class="text-white">Terms of Use</a>
                 </li>
               </ul>
         
@@ -44,21 +44,13 @@
       <!-- Grid column -->
       <div class="col-sm">
         <!--Grid column newsletter-->
-        <div class="col-sm-4 col-md-8 col-lg-12">
-          <h6 class="font-weight-medium text-uppercase text-white">Susbcribe and win a premium account!</h6>
-            <form class="input-group flex-center">
-              <input type="text" class="form-control form-control-sm" placeholder="Your email"
-                aria-label="Your email" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                  <button class="btn btn-sm btn-outline-white text-white my-0" type="button">Sign up</button>
-              </div>
-            </form>
+        <div class="col-sm-4 col-lg-12">
         </div>
       </div>
   </div>
 
   <!-- Copyright -->
-  <div class="footer-copyright font-weight-light small text-center text-white py-3">© 2020 Copyright:
+  <div class="footer-copyright font-weight-light text-center text-white py-3">© 2020 Copyright:
     <a href="https://github.com/Nicolassaeys/Getflix"> Becode.org </a>
   </div>
   <!-- Copyright -->

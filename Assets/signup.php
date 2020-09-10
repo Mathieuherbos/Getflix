@@ -2,14 +2,17 @@
 
 include_once 'db/db.php';
 
+//new PDO ('mysql:host=sql100.epizy.com;port=3306;dbname=epiz_26591763_catflix','epiz_26591763','nNU2fD6vzKC', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
 ?>
 
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SIGN UP</title>
+    <link rel="icon" href="images/paw.png" type="image/png">
+    <title>SIGN UP</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
@@ -19,38 +22,30 @@ include_once 'db/db.php';
 </head>
 <body>
 
-    <header>
-        <!--Code to include navbar-->
-        <?php include("navbar/navbar.php"); ?>
-        <style><?php include("navbar/navbar.css"); ?></style>
-        <!--END OF Code to include navbar-->
-    <header>
-        <section id="cover2" class="min-vh-100" >
+        <section id="cover2" class="min-vh-100">
             <div id="cover-caption">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-4 col-sm-4 col-lg-12 col-md-8  mx-auto text-center form p-4">
+                        <div class="col-xl-4 col-lg-5 col-md-6 col-sm-10 mx-auto text-center form p-4">
                             <h1 class="title">SIGN UP</h1>
-                                <div class="px-2 form signupform min-vh-100">
-                                    <form action="/Assets/db/signup_db.php" method="post" class="needs-validation" novalidate>
+                                <div class="px-2 signupform">
+                                    <form action="db/signup_db.php" method="post" class="needs-validation" novalidate="" >
                                         <div class="form-group usernameSi">
                                             <input class="form-control mb-3" type="text" name="firstName" placeholder="John" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$">
-                                           
-                                            <div class="invalid-feedback">Please enter valid name, no </div>
+                                            <div class="invalid-feedback">Nope, need a valid name</div>
                                         </div>
                                         <div class=" form-group usernameSi">
-                                            <input class="form-control mb-3"type="text" name="lastName" placeholder="Doe" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$">  
-                                            <div class="invalid-feedback">Please enter a valid lastname</div>
+                                            <input class="form-control mb-3"type="text" name="lastName" placeholder="Doe" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$">
+                                             <div class="invalid-feedback">And we need a valid lastname</div>
                                         </div>
 
                                         <div class="form-group passwordSi">
-                                            <input class="form-control mb-3" type="text" name="user" placeholder="User name : JD123" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z0-9]*)*$">
-                                
-                                                <div class="invalid-feedback">Please enter a valid username</div>
+                                            <input class="form-control mb-3" type="text" name="user" placeholder="User name : JD123" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z0-9]*)*$">                                          <div class="invalid-feedback">Anything but special characters</div>
+                                            
                                         </div>
                                         <div class="form-group usernameSi">
-                                            <input class="form-control mb-3" type="text" name="email" placeholder="jdoe@gmail.com" required pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$">
-                                            <div class="invalid-feedback">Please enter a valid email</div>
+                                            <input class="form-control mb-3" type="text" name="email" placeholder="jdoe@gmail.com" required pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$">        
+                                            <div class="invalid-feedback">Oops, this doesn't look like an email to me</div>
                                         </div>
                                         
 
@@ -62,30 +57,27 @@ include_once 'db/db.php';
                                         <div class="passwordSi form-group">
                                             <input id="confirm_password" class="form-control mb-3" type="password" name="confirm_pw" placeholder="Confirm password" required onChange="checkPasswordMatch();">
                                             <div id="checkmatch"></div>
-                                            <div class="invalid-feedback">Confirm your password</div>
                                         </div>
 
                                         <div class="usernameSi">              
+                                            <p>Do you want to go premium ?</p>
                                             <div class="radio">
                                                 <div class="form-check form-check-inline">
-                                                    <legend class="col-form-label col-sm-9 pt-0">Do you want to go premium ?</legend>
                                                 <input class="form-check-input" type="radio" name="premium" id="inlineRadio1" value="1">
                                                 <label class="form-check-label" for="inlineRadio1">
-                                                    Yes!
+                                                    Yes !
                                                 </label>
                                         </div>
-                                       
+                                        </div>
                                         <br>
-                                        <button type="submit" name="submit" class="btn btn-outline-light gobtn"><b>GO ! <i class="fa fa-paw animate__animated animate__fadeIn" aria-hidden="true"></i></b></button>
-                                    </form>
-                                </div>
+                                        <button type="submit" name="submit" class="btn btn-danger gobtn"><b>GO ! <i class="fa fa-paw animate__animated animate__fadeIn" aria-hidden="true"></i></b></button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    
-
     
     <!--Code to include footer-->
     <?php include("footer/footer.php"); ?>
@@ -109,8 +101,7 @@ include_once 'db/db.php';
                     let confirmPassword = $("#confirm_password").val();
 
                     if (password != confirmPassword)
-                        $("#checkmatch").html("Passwords do not match!");
-                        
+                    $("#checkmatch").html("Passwords do not match!");
 
                     else
                         $("#checkmatch").html("Passwords match.");
@@ -119,8 +110,7 @@ include_once 'db/db.php';
                 $(document).ready(function () {
                 $("#confirm_password").keyup(checkPasswordMatch);
                 });
-
-               /*La fonction principale de ce script est d'empêcher l'envoi du formulaire si un champ a été mal rempli
+                /*La fonction principale de ce script est d'empêcher l'envoi du formulaire si un champ a été mal rempli
             *et d'appliquer les styles de validation aux différents éléments de formulaire*/
            (function() {
              'use strict';
