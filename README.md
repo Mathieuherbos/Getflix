@@ -24,7 +24,7 @@ To accomplish this, we had to achieve the following base criteria:
 * Make a secure code
 * Deploy the site. PHP is not supported by github, find free alternatives.
 
-[PFull project description](https://github.com/becodeorg/BXL-Swartz-3-21/blob/master/06-PHP/getflix_project.md)
+[Full project description](https://github.com/becodeorg/BXL-Swartz-3-21/blob/master/06-PHP/getflix_project.md)
 
 ### Aim
 
