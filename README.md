@@ -316,6 +316,13 @@ _TERMS AND CONDITIONS_
 ![t&cs page](readme-img/jpg)
 
 
+_Newsletter_
+
+![newsletter](readme-img/news1.jpg)
+![newsletter](readme-img/news2.jpg)
+![newsletter](readme-img/news3.jpg)
+
+
 ## Resources
 
 ### Tools
