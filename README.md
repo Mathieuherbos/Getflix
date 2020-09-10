@@ -120,12 +120,10 @@ _Other tasks_
 - [x] Search function - Khadija
 - [x] Comments section - Ashleigh 
 - [x] Fetch & displaly API data (TMDb) - Khadija 
-- [ ] Filtering by genre - ?
-- [ ] Newslette - ?
-- [ ] CRUD - ?
+- [x] Filtering by genre - Khadija
+- [x] Newsletter - Ashleigh
 - [ ] lost passwords - ?
 - [ ] Password show/hide button (eye) - Khadija
-- [ ] Lightmode/ darkmode - ?
 
 
 ### Process
@@ -160,14 +158,16 @@ The site is constructed as follows:
     - arrive at results
       - If video selected
         - arrive at streaming page
-  - If category selected
+  - If category selected from navbar
     - arrive at category / filter page
-      - If filtered
-        - arrive at results
-    - if video selected
-      - arrive at streaming page
+      - If video selected
+        - arrive at streaming page
   - If video selected
     - arrive at streaming page
+  - If FAQ selected from footer
+    - arrive at FAQ page
+  - If Terms and Conditions seleccted from footer
+    - arrive at Terms and Conditions page
 
 ![site-map](readme-img/diagram_sitemap.jpg)
 
@@ -185,8 +185,9 @@ The site is constructed as follows:
 
 It was proposed that the must-have features of the site should be mostly complete and deployable by Friday week 2
 A preliminary merge of all completed work and git folder organisation occured on Wednesday of the second week. All up to date and integrated work is published here.
-All main features of the project should be completed by Wednesday of the third week end of day to leave Thursday and Friday  to fix any outstanding issues, consolidate the last pieces of the styling, and review the Lighthouse score.
+All main features of the project should be completed by Wednesday of the third week end of day to leave Thursday to fix any outstanding issues, consolidate the last pieces of the styling, and review the Lighthouse score.
 
+A presentation of the project will occur on the third week of the project.
 
 ## Concept evolution
 
@@ -264,15 +265,62 @@ TheMovieDB.org was implemented and tested in plain HTML:
 
 ![movie db api](readme-img/moviedbapi.jpg)
 
-### End project
-
 ### Final product
+
+_INDEX_
+
+![index page](readme-img/jpg)
+
+_SIGN UP_
+
+![sign up page](readme-img/jpg)
+
+
+_LOGIN_
+
+![login page](readme-img/jpg)
+
+
+_HOME_
+
+![home page](readme-img/jpg)
+
+
+_STREAMING_
+
+![streaming page](readme-img/jpg)
+
+
+_BEST RATED (api)_
+
+![best rated page](readme-img/jpg)
+
+
+_ACTION-COMEDY-THRILLER_
+
+![filter page](readme-img/jpg)
+
+
+_SEARCH RESULTS_
+
+![search page](readme-img/jpg)
+
+
+_FAQ_
+
+![faq page](readme-img/jpg)
+
+
+_TERMS AND CONDITIONS_
+
+![t&cs page](readme-img/jpg)
+
 
 ## Resources
 
 ### Tools
 
-- Site and database hosting: [000webhostapp](https://getflixproject.000webhostapp.com/)
+- Site and database hosting: [Infinity Free](https://infinityfree.net/)
 - Web design: [Figma](https://www.figma.com/file/SKbeGU18QARlioaiViQ1QC/Wireframing-in-Figma?node-id=0%3A1)
 - Web design: [Bootstrap 4](https://getbootstrap.com/)
 - Web design - icons: [Font Awesome](https://fontawesome.com/)
@@ -289,15 +337,12 @@ TheMovieDB.org was implemented and tested in plain HTML:
 
 - [Unsplash](https://unsplash.com/)
 
-### Coding
-
-- [Signup/login system](https://www.youtube.com/watch?v=LC9GaXkdxF8)
-- [Comments](
-
 ### Youtube trailers for movie database
 
-LINK TO EXCEL 
+[See in Excel](...)
 
 ## Acknowledgements
 
 We would like to thank our brain, patience, motivation and everyone's cats.
+
+Thank you to our colleauges for helping us reflect ideas, aiding with problems and keeping us sane.
