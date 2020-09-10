@@ -14,17 +14,25 @@
 
 ## The project
 
-this project is....
+We were tasked with developing a live streaming platform similar to Netflix incorperating the languages, tools and frameworks we had learnt so far at BeCode, importantly PHP. 
+
+To accomplish this, we had to achieve the following base criteria:
+
+* A session system: registration, connection / disconnection.
+* Different rights: registrants have the right to comment on the content. You can add other rights depending on the different types of users.
+* Include a search bar and sort by filters
+* Make a secure code
+* Deploy the site. PHP is not supported by github, find free alternatives.
+
+[PFull project description](https://github.com/becodeorg/BXL-Swartz-3-21/blob/master/06-PHP/getflix_project.md)
 
 ### Aim
 
-The aim of this project is to.....
-
-[Project challenge description](https://github.com/becodeorg/BXL-Swartz-3-21/blob/master/06-PHP/getflix_project.md)
+The aim of this project is to consolidate our knowledge of PHP and bring together our other language knowledge by developing a streaming platform.
 
 ### Features
 
-#### Landing page
+#### Landing page (index.html)
 
 - **Sign Up** button leading to _Sign Up_ page
 - **Log in** button leading to _login_ pages
@@ -34,42 +42,53 @@ The aim of this project is to.....
 - Make a new account
 - Password confirmation for security
 - Password length of 8 char requirements
-- Sign up for premium access
+- Email verification
+- Name, username and password constraints to secure code
+- Option for premium access
 - A beautiful cat picture
 
 #### Login page
 
 - **Login** with _username_ or _email_
-- **Reset password**
+- User name and password _verification_
 
 #### Home page
 
 - **Navigation bar** for ease of traversing through the site
 - **Log out** option, ending the session and returning to the _landing page_
 - **Search bar** to search for videos
-- **4 genred** of videos for the user to browse
-- **Filter by genre** to display all videos for that genre
-- A **sample of videos** for each category leading to the _video player page_
-- **Footer section** with logo, sitemap and contact details
+- **3 genres** of videos for the user to browse
+  - with A **sample of videos** for each category leading to the _streaming page_
+- Mobile and touch friendly carousels
+- **Footer section** with links to T&Cs and FAQs
 
 #### Results page
 
 - View **all results** from the search
+- A **grumpy cat** result when _no page is found_
 
-WORK IN PROGRESS
-
-#### Video player page
+#### Streaming page
 
 - **Fully responsive** youtube streaming
 - **Movie information** (description, year, rating)
 - **Comments section** for _each_ video
 
+#### Filtered pages
+
+- A **full page per genre** to display all videos for that genre
+- A page for _all movies_
+- **Best Rated movies** displaying the currently best rated movies using TmDB api
+
 #### Other
 
-- A fully functioning **database** hosting two tables of information
+- Separate Terms and Conditions page
+- Separate FAQ page
+- A fully functioning **database** hosting three tables of information
   _ The videos per category
-  _ Comments for each video \* User credentials
-- Use of a **Session** \* Log in and log out
+  _ User details
+  _ Comments for each video 
+- Use of a **Session** Log in and log out
+- Monthly newsletter
 
 ### Practices
 
@@ -80,10 +99,10 @@ WORK IN PROGRESS
 - Password restriction by length
 - Password confrimation (repeating the password entered)
 - Limiting characters able to be sent to the database
-- Passing entered data as a string so that it cannot be considered code
+- Passing entered data as a string/ changing html characters so that it cannot be considered code
 - Only letters can be considered for names
 - Only letters and numbers can be considered for user names
-- POST instead of GET requests
+- POST instead of GET requests where for user inputs
 
 #### Design
 
@@ -106,7 +125,6 @@ _Common tasks_
 * Database establishment
 * Merging, file management, testing
 * Final styling 
-* Lighthouse updating
 
 _Other tasks_
 
@@ -117,13 +135,13 @@ _Other tasks_
 - [x] Page design: Navbar & Footer - Khadija
 - [x] Page design: Home - Ashleigh
 - [x] Page design: Streaming - Mathieu
+- [x] Overall design, style harmonisation & upkeep - Nicolas
 - [x] Search function - Khadija
 - [x] Comments section - Ashleigh 
 - [x] Fetch & displaly API data (TMDb) - Khadija 
 - [x] Filtering by genre - Khadija
 - [x] Newsletter - Ashleigh
-- [ ] lost passwords - ?
-- [ ] Password show/hide button (eye) - Khadija
+
 
 
 ### Process
