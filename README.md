@@ -333,6 +333,7 @@ _Newsletter_
 - Web design - icons: [Font Awesome](https://fontawesome.com/)
 - Carousel: [Owl.Carousel.js](https://owlcarousel2.github.io/OwlCarousel2/)
 - Top rated movie API [TMDb](https://www.themoviedb.org/documentation/api)
+- Newsletter: [Mailchimp](https://mailchimp.com/)
 
 ### Planning
 
